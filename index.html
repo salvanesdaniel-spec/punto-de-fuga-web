@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Punto de Fuga | Taller de Dibujo Manga</title>
+
+  <!-- Fuente moderna -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">Punto de Fuga</div>
+    <ul>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#servicios">Clases</a></li>
+      <li><a href="#sobre">Sobre mí</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <header id="inicio" class="hero">
+    <div class="hero-content">
+  <h1>Convertí tu pasión por el manga en habilidad real</h1>
+  <p>
+    Taller profesional de dibujo para adolescentes y adultos que
+    quieren aprender técnica, estilo y narrativa visual desde cero.
+  </p>
+  <a href="#contacto" class="btn">Reservar entrevista inicial</a>
+</div>
+</header>
+
+<section class="section hidden">
+  <h2>¿Por qué elegir Punto de Fuga?</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Formación guiada</h3>
+      <p>No improvisás. Seguís un camino estructurado de aprendizaje.</p>
+    </div>
+    <div class="card">
+      <h3>Corrección personalizada</h3>
+      <p>Feedback real para mejorar técnica y estilo.</p>
+    </div>
+    <div class="card">
+      <h3>Enfoque profesional</h3>
+      <p>Aprendés como lo haría un ilustrador en formación seria.</p>
+    </div>
+  </div>
+</section>
+
+  </header>
+
+  <section id="servicios" class="section hidden">
+    <h2>Clases</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Dibujo Manga</h3>
+        <p>Proporciones, anatomía, expresiones y estilo japonés.</p>
+      </div>
+      <div class="card">
+        <h3>Creación de Personajes</h3>
+        <p>Diseño conceptual y desarrollo de identidad visual.</p>
+      </div>
+      <div class="card">
+        <h3>Narrativa Visual</h3>
+        <p>Composición, viñetas y construcción de historias.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre" class="section hidden">
+    <h2>Sobre el taller</h2>
+    <p>
+  Punto de Fuga es un espacio de formación artística dirigido por
+  Daniel Salvanes, con más de 15 años de experiencia enseñando dibujo
+  e ilustración en talleres y espacios educativos.
+  El objetivo es formar artistas con criterio técnico y mirada propia.
+    </p>
+  </section>
+
+  <section id="contacto" class="section hidden">
+    <h2>Contacto</h2>
+    <p>Consultá horarios y disponibilidad de cupos.</p>
+    <a href="mailto:tuemail@ejemplo.com" class="btn">Enviar Email</a>
+  </section>
+
+<section id="portfolio" class="section hidden">
+  <h2>Portfolio</h2>
+  <div class="gallery">
+    <div class="gallery-item"></div>
+    <div class="gallery-item"></div>
+    <div class="gallery-item"></div>
+    <div class="gallery-item"></div>
+  </div>
+</section>
+<section class="section dark hidden">
+  <h2>Los cupos son limitados</h2>
+  <p>
+    Si querés empezar a desarrollar tu estilo manga con una guía profesional,
+    este es el momento.
+  </p>
+  <a href="#contacto" class="btn">Quiero mi lugar</a>
+</section>
+  <footer>
+    <p>© 2026 Punto de Fuga</p>
+  </footer>
+<script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add("show");
+      }
+    });
+  });
+
+  const hiddenElements = document.querySelectorAll(".hidden");
+  hiddenElements.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
