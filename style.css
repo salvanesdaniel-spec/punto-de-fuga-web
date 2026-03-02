@@ -57,7 +57,14 @@ body {
   background: radial-gradient(circle at center, #1a001f 0%, #0b0b12 70%);
   text-align: center;
   padding-top: 60px;
-  position: relative;
+  position: relative;   
+  background-image: linear-gradient(rgba(20,20,20,0.75), rgba(20,20,20,0.75)),
+                      url("img/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 120px 20px;
+    text-align: center;
 }
 
 .hero::after {
@@ -200,4 +207,36 @@ footer {
 .gallery-item:hover {
   transform: scale(1.05);
   box-shadow: 0 0 30px rgba(255,0,60,0.4);
+}
+.galeria {
+    padding: 60px 20px;
+    background-color: #111;
+    color: white;
+    text-align: center;
+}
+
+.contenedor-galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.contenedor-galeria img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.contenedor-galeria img:hover {
+    transform: scale(1.05);
+}
+@media (max-width: 768px) {
+    .contenedor-galeria {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding: 80px 20px;
+    }
 }
